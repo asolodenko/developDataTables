@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data table</title>
+    <link href="styles/style.css" rel="stylesheet" >
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-8">
+            <h1>Students Data Table</h1>
+            <p>This example shows the student's name in the first column, 
+                student's surname, department, group, scholarship</p>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-8">
+                <table class="table dataTable table-bordered" role="grid">
+                    <thead class="sorting thead-dark">
+                        <tr>
+                            <th data-field="Name" data-sortable="true">Name</th>
+                            <th data-field="Surname" data-sortable="true">Surname</th>
+                            <th data-field="Department" data-sortable="true">Department</th>
+                            <th data-field="Group" data-sortable="true">Group</th>
+                            <th data-field="Scholarship" data-sortable="true">Scholarship</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type='text/javascript' src="js/main.js"></script>
+    <script type='text/javascript' src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
