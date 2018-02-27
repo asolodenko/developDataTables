@@ -7,6 +7,7 @@
     <title>Data table</title>
     <link href="styles/style.css" rel="stylesheet" >
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="DataTables/datatables.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -20,22 +21,14 @@
         <div class="row">
             <div class="col-sm-12 col-md-8">
                 <table class="table dataTable table-bordered" role="grid">
-                    <thead class="sorting thead-dark">
-                        <tr>
-                            <th data-field="Name" data-sortable="true">Name</th>
-                            <th data-field="Surname" data-sortable="true">Surname</th>
-                            <th data-field="Department" data-sortable="true">Department</th>
-                            <th data-field="Group" data-sortable="true">Group</th>
-                            <th data-field="Scholarship" data-sortable="true">Scholarship</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
                 </table>
             </div>
         </div>
     </div>
-    <script type='text/javascript' src="js/main.js"></script>
+    <script type='text/javascript' src="js/jquery-3.3.1.min.js"></script>
+    <script type='text/javascript' src="DataTables/DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type='text/javascript' src="DataTables/datatables.min.js"></script>
     <script type='text/javascript' src="bootstrap/js/bootstrap.js"></script>
+    <script type='text/javascript' src="js/main.js"></script>
 </body>
 </html>

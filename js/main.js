@@ -1,40 +1,27 @@
-const mydata = [
-    {
-        Name: "Arina",
-        Surname: "Karali",
-        Department: "Software engineering",
-        Group: "318",
-        Scholarship: "+"
-    },
-    {
-        Name: "Yana",
-        Surname: "Marienko",
-        Department: "Software engineering",
-        Group: "218",
-        Scholarship: "+"
-    },
-    {
-        Name: "Maxim",
-        Surname: "Gromov",
-        Department: "Software engineering",
-        Group: "315",
-        Scholarship: "-"
-    }
+const dataSet = [
+    [ "Arina", "Karali", "Software engineering", "318", "+" ],
+    [ "Yana", "Marienko", "Software engineering", "316", "+" ],
+    [ "Maxim", "Gromov", "Software engineering", "314", "-" ],
+    [ "Ivan", "Karaev", "Hardware engineering", "141", "-" ],
+    [ "Yan", "Marienkov", "Hardware engineering", "245", "+" ],
+    [ "Mikhail", "Gromenko", "Hardware engineering", "544", "+" ],
+    [ "Alina", "Ivanova", "Computer knowledge", "222", "+" ],
+    [ "Yana", "Marko", "Computer knowledge", "222", "+" ],
+    [ "Maxim", "Chemeris", "Software engineering", "114", "+" ],
+    [ "Maria", "Omova", "Computer knowledge", "329", "-" ],
+    [ "Karina", "Hatsko", "Software engineering", "414", "+" ],
+    [ "Maxim", "Karlash", "Hardware engineering", "341", "-" ],
 ];
-(function() {
-    'use strict';
 
-    window.addEventListener('load', function() {
-        let tbody = document.getElementsByTagName("tbody");
-        for (let obj of mydata) {
-            let newRow = document.createElement('tr');
-            tbody.appendChild(newRow);
-            for (let property in obj) {
-                let newCell = document.createElement('td');
-                newRow.appendChild(newCell);
-                let newText  = document.createTextNode(obj[property]);
-                newCell.appendChild(newText);
-            }
-        }
-    })
-})();
+$(document).ready(function(){
+    $('.dataTable').dataTable({
+        data: dataSet,
+        columns: [
+            { title: "Name" },
+            { title: "Surname" },
+            { title: "Department" },
+            { title: "Group" },
+            { title: "Scholarship" }
+        ]
+    });
+});
